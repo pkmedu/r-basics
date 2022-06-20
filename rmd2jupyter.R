@@ -27,7 +27,19 @@ rmd2jupyter("SequencesOfNumbers.Rmd")
 list.files()
 
 
-setwd("C:/r-basics/swirl/Vectors")
+
+setwd("C:/r-basics/swirl/vectors")
 getwd()
 rmd2jupyter("vector.Rmd")
 list.files()
+
+
+setwd("C:/r-basics/swirl")
+getwd()
+rmd2jupyter("swirlLearningPath.Rmd")
+list.files()
+
+
+
+
+
