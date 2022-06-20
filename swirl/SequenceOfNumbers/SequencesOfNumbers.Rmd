@@ -9,7 +9,7 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## When in swirl
+### When in swirl
 
 You can exit swirl and return to the R prompt (>) at any time by pressing the Esc key.
 If you are already at the prompt, type bye() to exit and save your progress. When you
@@ -61,7 +61,7 @@ nonetheless it's good to know how it could happen.
 Remember that if you have questions about a particular R function, you can access its
 documentation with a question mark followed by the function name: ?function_name_here.
 However, in the case of an operator like the colon used above, you must enclose the
-symbol in backticks like this: ?`:`. (NOTE: The backtick (`) key is generally located in
+symbol in backticks like this: *?`:`*. (NOTE: The backtick (`) key is generally located in
 the top left corner of a keyboard, above the Tab key. If you don't have a backtick key,
 you can use regular quotes.)
 
@@ -69,7 +69,7 @@ you can use regular quotes.)
 ?':'
 ```
 
-The most basic use of seq() does exactly the same thing as the `:` operator. Try seq(1,
+The most basic use of *seq()* does exactly the same thing as the *`:`* operator. Try seq(1,
 20) to see this.
 
 
@@ -98,7 +98,7 @@ integers from 1 to N, where N represents the length of the my_seq vector. In oth
 words, we want a new vector (1, 2, 3, ...) that is the same length as my_seq.
                          
 There are several ways we could do this. One possibility is to combine the `:` operator
-and the length() function like this: 1:length(my_seq). Give that a try.
+and the length() function like this: *1:length(my_seq)*. Give that a try.
 
 ```{r}
 1:length(my_seq)
@@ -110,7 +110,7 @@ Another option is to use seq(along.with = my_seq). Give that a try.
 seq(along.with = my_seq)
 ```
 However, as is the case with many common tasks, R has a separate built-in function for
-this purpose called seq_along(). Type seq_along(my_seq) to see it in action.
+this purpose called *seq_along()*. Type seq_along(my_seq) to see it in action.
 ```{r}
 seq_along(my_seq)
 

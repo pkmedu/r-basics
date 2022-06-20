@@ -9,8 +9,7 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-In this lesson, we will explore some basic building blocks of the R programming
-language.
+### In this lesson, we will explore some basic building blocks of the R programming language.
 
 If at any point you'd like more information on a particular topic related to R,
 you can type help.start() at the prompt, which will open a menu of resources
@@ -59,11 +58,11 @@ What is the value of y? Type y to find out.
 ```{r}
 y
 ```
-Now, let's create a small collection of numbers called a vector. Any object that
-contains data is called a data structure and numeric vectors are the simplest
-type of data structure in R. In fact, even a single number is considered a vector of length one.
+#### Now, let's create a small collection of numbers called a vector. Any object that
+#### contains data is called a data structure and numeric vectors are the simplest
+#### type of data structure in R. In fact, even a single number is considered a vector of length one.
 
-The easiest way to create a vector is with the c() function, which stands for
+The easiest way to create a vector is with the **c()** function, which stands for
 'concatenate' or 'combine'. To create a vector containing the numbers 1.1, 9, and 3.14, type c(1.1, 9, 3.14). Try it now and store the result in a variable called z.
 
 ```{r}
@@ -72,7 +71,7 @@ z <- c(1.1, 9, 3.14)
 
 Anytime you have questions about a particular function, you can access R's
 built-in help files via the `?` command. For example, if you want more
-information on the c() function, type ?c without the parentheses that normally
+information on the **c()** function, type **?c** without the parentheses that normally
 follow a function name. Give it a try.
 
 ```{r}
@@ -150,8 +149,8 @@ Go ahead and print the contents of my_div.
 ```{r}
 my_div
 ```
-When given two vectors of the same length, R simply performs the specified
-arithmetic operation (`+`, `-`, `*`, etc.) element-by-element. If the vectors are of different lengths, R 'recycles' the shorter vector until it is the same length as the longer vector.
+### Arithmetic operation (`+`, `-`, `*`, etc.) element-by-element
+If the vectors are of different lengths, R 'recycles' the shorter vector until it is the same length as the longer vector.
 
 When we did z * 2 + 100 in our earlier example, z was a vector of length 3, but
 technically 2 and 100 are each vectors of length 1.
@@ -187,11 +186,10 @@ commands. Try hitting the up arrow on your keyboard until you get to this comman
 ```{r}
 c(1, 2, 3, 4) + c(0, 10, 1000)
 ```
-You're close...I can feel it! Try it again. Or, type info() for more options.
 
 If your environment does not support the up arrow feature, then just type the
 corrected command to move on.
-
+### The following five functions are probably swirl-specific - not sure!
 When you are at the R prompt (>):
 -- Typing skip() allows you to skip the current question.
 -- Typing play() lets you experiment with R on your own; swirl will ignore what
