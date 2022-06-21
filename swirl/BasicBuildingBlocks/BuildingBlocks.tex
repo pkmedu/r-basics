@@ -1,0 +1,458 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{lmodern}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\hypersetup{
+  pdftitle={R Basic Building Blocks},
+  pdfauthor={swirl Team},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+\urlstyle{same} % disable monospaced font for URLs
+\usepackage[margin=1in]{geometry}
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+
+\title{R Basic Building Blocks}
+\author{swirl Team}
+\date{2022-06-19}
+
+\begin{document}
+\maketitle
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(tinytex)}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{in-this-lesson-we-will-explore-some-basic-building-blocks-of-the-r-programming-language.}{%
+\subsubsection{In this lesson, we will explore some basic building
+blocks of the R programming
+language.}\label{in-this-lesson-we-will-explore-some-basic-building-blocks-of-the-r-programming-language.}}
+
+If at any point you'd like more information on a particular topic
+related to R, you can type help.start() at the prompt, which will open a
+menu of resources either within RStudio or your default web browser,
+depending on your setup). Alternatively, a simple web search often
+yields the answer you're looking for.
+
+In its simplest form, R can be used as an interactive calculator. Type 5
++ 7 and press Enter.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\DecValTok{5} \SpecialCharTok{+} \DecValTok{7}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 12
+\end{verbatim}
+
+R simply prints the result of 12 by default. However, R is a programming
+language and often the reason we use a programming language as opposed
+to a calculator is to automate some process or avoid unnecessary
+repetition.
+
+In this case, we may want to use our result from above in a second
+calculation. Instead of retyping 5 + 7 every time we need it, we can
+just create a new variable that stores the result.
+
+The way you assign a value to a variable in R is by using the assignment
+operator, which is just a `less than' symbol followed by a `minus' sign.
+It looks like this: \textless-
+
+Think of the assignment operator as an arrow. You are assigning the
+value on the right side of the arrow to the variable name on the left
+side of the arrow. To assign the result of 5 + 7 to a new variable
+called x, you type x \textless- 5 + 7. This can be read as `x gets 5
+plus 7'. Give it a try now.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{x }\OtherTok{\textless{}{-}} \DecValTok{5} \SpecialCharTok{+} \DecValTok{7}
+\end{Highlighting}
+\end{Shaded}
+
+You'll notice that R did not print the result of 12 this time. When you
+use the assignment operator, R assumes that you don't want to see the
+result immediately, but rather that you intend to use the result for
+something else later on.
+
+To view the contents of the variable x, just type x and press Enter. Try
+it now.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{x}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 12
+\end{verbatim}
+
+Now, store the result of x - 3 in a new variable called y.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{y }\OtherTok{\textless{}{-}}\NormalTok{ x }\SpecialCharTok{{-}} \DecValTok{3}
+\end{Highlighting}
+\end{Shaded}
+
+What is the value of y? Type y to find out.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{y}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 9
+\end{verbatim}
+
+\hypertarget{now-lets-create-a-small-collection-of-numbers-called-a-vector.-any-object-that}{%
+\paragraph{Now, let's create a small collection of numbers called a
+vector. Any object
+that}\label{now-lets-create-a-small-collection-of-numbers-called-a-vector.-any-object-that}}
+
+\hypertarget{contains-data-is-called-a-data-structure-and-numeric-vectors-are-the-simplest}{%
+\paragraph{contains data is called a data structure and numeric vectors
+are the
+simplest}\label{contains-data-is-called-a-data-structure-and-numeric-vectors-are-the-simplest}}
+
+\hypertarget{type-of-data-structure-in-r.-in-fact-even-a-single-number-is-considered-a-vector-of-length-one.}{%
+\paragraph{type of data structure in R. In fact, even a single number is
+considered a vector of length
+one.}\label{type-of-data-structure-in-r.-in-fact-even-a-single-number-is-considered-a-vector-of-length-one.}}
+
+The easiest way to create a vector is with the \textbf{c()} function,
+which stands for `concatenate' or `combine'. To create a vector
+containing the numbers 1.1, 9, and 3.14, type c(1.1, 9, 3.14). Try it
+now and store the result in a variable called z.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{z }\OtherTok{\textless{}{-}} \FunctionTok{c}\NormalTok{(}\FloatTok{1.1}\NormalTok{, }\DecValTok{9}\NormalTok{, }\FloatTok{3.14}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+Anytime you have questions about a particular function, you can access
+R's built-in help files via the \texttt{?} command. For example, if you
+want more information on the \textbf{c()} function, type \textbf{?c}
+without the parentheses that normally follow a function name. Give it a
+try.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{?c}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## starting httpd help server ... done
+\end{verbatim}
+
+Type z to view its contents. Notice that there are no commas separating
+the values in the output.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{z}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 1.10 9.00 3.14
+\end{verbatim}
+
+You can combine vectors to make a new vector. Create a new vector that
+contains z, 555, then z again in that order. Don't assign this vector to
+a new variable, cso that we can just see the result immediately.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{c}\NormalTok{(z, }\DecValTok{555}\NormalTok{, z)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1]   1.10   9.00   3.14 555.00   1.10   9.00   3.14
+\end{verbatim}
+
+Numeric vectors can be used in arithmetic expressions. Type the
+following to see what happens: z * 2 + 100.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{z }\SpecialCharTok{*} \DecValTok{2} \SpecialCharTok{+} \DecValTok{100}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 102.20 118.00 106.28
+\end{verbatim}
+
+First, R multiplied each of the three elements in z by 2. Then it added
+100 to each element to get the result you see above. Other common
+arithmetic operators are \texttt{+}, \texttt{-}, \texttt{/}, and
+\texttt{\^{}} (where x\^{}2 means `x squared'). To take the square root,
+use the sqrt() function and to take the absolute value, use the abs()
+function.
+
+Take the square root of z - 1 and assign it to a new variable called
+my\_sqrt.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{my\_sqrt }\OtherTok{\textless{}{-}} \FunctionTok{sqrt}\NormalTok{(z }\SpecialCharTok{{-}}\DecValTok{1}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+Before we view the contents of the my\_sqrt variable, what do you think
+it contains?
+
+1: a vector of length 0 (i.e.~an empty vector) 2: a vector of length 3
+3: a single number (i.e a vector of length 1)
+
+2
+
+Think about how R handled the other `vectorized' operations:
+element-by-element.
+
+Print the contents of my\_sqrt.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{my\_sqrt}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 0.3162278 2.8284271 1.4628739
+\end{verbatim}
+
+As you may have guessed, R first subtracted 1 from each element of z,
+then took the square root of each element. This leaves you with a vector
+of the same length as the original vector z.
+
+Now, create a new variable called my\_div that gets the value of z
+divided by my\_sqrt.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{my\_div }\OtherTok{\textless{}{-}}\NormalTok{ z}\SpecialCharTok{/}\NormalTok{my\_sqrt}
+\end{Highlighting}
+\end{Shaded}
+
+Which statement do you think is true?
+
+1: my\_div is a single number (i.e a vector of length 1) 2: The first
+element of my\_div is equal to the first element of z divided by the
+first element of my\_sqrt, and so on\ldots{} 3: my\_div is undefined
+
+Selection: 2
+
+You are quite good my friend!
+
+Go ahead and print the contents of my\_div.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{my\_div}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 3.478505 3.181981 2.146460
+\end{verbatim}
+
+\hypertarget{arithmetic-operation---etc.-element-by-element}{%
+\subsubsection{\texorpdfstring{Arithmetic operation (\texttt{+},
+\texttt{-}, \texttt{*}, etc.)
+element-by-element}{Arithmetic operation (+, -, *, etc.) element-by-element}}\label{arithmetic-operation---etc.-element-by-element}}
+
+If the vectors are of different lengths, R `recycles' the shorter vector
+until it is the same length as the longer vector.
+
+When we did z * 2 + 100 in our earlier example, z was a vector of length
+3, but technically 2 and 100 are each vectors of length 1.
+
+Behind the scenes, R is `recycling' the 2 to make a vector of 2s and the
+100 to make a vector of 100s. In other words, when you ask R to compute
+z * 2 + 100, what it really computes is this: z * c(2, 2, 2) + c(100,
+100, 100).
+
+To see another example of how this vector `recycling' works, try adding
+c(1, 2, 3, 4) and c(0, 10). Don't worry about saving the result in a new
+variable.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{c}\NormalTok{(}\DecValTok{1}\NormalTok{, }\DecValTok{2}\NormalTok{, }\DecValTok{3}\NormalTok{, }\DecValTok{4}\NormalTok{) }\SpecialCharTok{+} \FunctionTok{c}\NormalTok{(}\DecValTok{0}\NormalTok{, }\DecValTok{10}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1]  1 12  3 14
+\end{verbatim}
+
+If the length of the shorter vector does not divide evenly into the
+length of the longer vector, R will still apply the `recycling' method,
+but will throw a warning to let you know something fishy might be going
+on.
+
+Try c(1, 2, 3, 4) + c(0, 10, 100) for an example.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{c}\NormalTok{(}\DecValTok{1}\NormalTok{, }\DecValTok{2}\NormalTok{, }\DecValTok{3}\NormalTok{, }\DecValTok{4}\NormalTok{) }\SpecialCharTok{+} \FunctionTok{c}\NormalTok{(}\DecValTok{0}\NormalTok{, }\DecValTok{10}\NormalTok{, }\DecValTok{100}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Warning in c(1, 2, 3, 4) + c(0, 10, 100): longer object length is not a multiple
+## of shorter object length
+\end{verbatim}
+
+\begin{verbatim}
+## [1]   1  12 103   4
+\end{verbatim}
+
+Before concluding this lesson, I'd like to show you a couple of
+time-saving tricks.
+
+Earlier in the lesson, you computed z * 2 + 100. Let's pretend that you
+made a mistake and that you meant to add 1000 instead of 100. You could
+either re-type the expression, or\ldots{}
+
+In many programming environments, the up arrow will cycle through
+previous commands. Try hitting the up arrow on your keyboard until you
+get to this command (z * 2 + 100), then change 100 to 1000 and hit
+Enter. If the up arrow doesn't work for you, just type the corrected
+command.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{c}\NormalTok{(}\DecValTok{1}\NormalTok{, }\DecValTok{2}\NormalTok{, }\DecValTok{3}\NormalTok{, }\DecValTok{4}\NormalTok{) }\SpecialCharTok{+} \FunctionTok{c}\NormalTok{(}\DecValTok{0}\NormalTok{, }\DecValTok{10}\NormalTok{, }\DecValTok{1000}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Warning in c(1, 2, 3, 4) + c(0, 10, 1000): longer object length is not a
+## multiple of shorter object length
+\end{verbatim}
+
+\begin{verbatim}
+## [1]    1   12 1003    4
+\end{verbatim}
+
+If your environment does not support the up arrow feature, then just
+type the corrected command to move on. \#\#\# The following five
+functions are probably swirl-specific - not sure! When you are at the R
+prompt (\textgreater): -- Typing skip() allows you to skip the current
+question. -- Typing play() lets you experiment with R on your own; swirl
+will ignore what you do\ldots{} -- UNTIL you type nxt() which will
+regain swirl's attention. -- Typing bye() causes swirl to exit. Your
+progress will be saved. -- Typing main() returns you to swirl's main
+menu. -- Typing info() displays these options again.
+
+In many programming environments, the up arrow will cycle through
+previous commands. Try hitting the up arrow on your keyboard until you
+get to this command (z * 2 + 100), then change 100 to 1000 and hit
+Enter. If the up arrow doesn't work for you, just type the corrected
+command.
+
+\end{document}

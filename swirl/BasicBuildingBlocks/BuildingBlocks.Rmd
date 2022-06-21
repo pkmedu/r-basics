@@ -2,12 +2,18 @@
 title: "R Basic Building Blocks"
 author: "swirl Team"
 date: '2022-06-19'
-output: html_document
+output:
+  word_document: default
+  html_document: default
+  pdf_document: default
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
+
+
+#library(tinytex)
 
 ### In this lesson, we will explore some basic building blocks of the R programming language.
 

@@ -36,7 +36,7 @@ list.files()
 
 setwd("C:/r-basics/swirl")
 getwd()
-rmd2jupyter("swirlLearningPath.Rmd")
+rmd2jupyter("swrlLearningPath.Rmd")
 list.files()
 
 
