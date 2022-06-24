@@ -11,6 +11,9 @@
 
 data(AirPassengers) # Loads the built-in data
 
+str(AirPassengers) # Find the internal data structure
+
+
 
 
 head(AirPassengers)  # Inspect the data set:
