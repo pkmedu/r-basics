@@ -10,7 +10,7 @@ dd<-read.table(text="CTFIP   Hispanic    NonHispanic
 
 # Installed tidydr
 library(tidyr)
-
+# Create new variables
 dd %>% 
   gather(ethnicity, freq, -CTFIP) %>% 
   mutate(HISPn=ifelse(ethnicity=="Hispanic", 1,2)) %>%

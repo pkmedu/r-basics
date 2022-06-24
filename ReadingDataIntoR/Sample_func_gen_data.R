@@ -1,4 +1,4 @@
-# generate data to create a data frame
+# Generate data to create a data frame
 i.data1 <- data.frame(sample (0:1, size=1000, replace=T)) 
 head(i.data1)
 
