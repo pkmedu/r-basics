@@ -1,5 +1,5 @@
 ---
-title: "Sequences of Numbers"
+title: "3. Sequences of Numbers"
 author: "swirl Team"
 date: '2022-06-19'
 output: html_document
