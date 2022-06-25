@@ -1,8 +1,0 @@
-
-Data frame:dd	6 observations and 3 variables    Maximum # NAs:0
-
-
-            Storage
-CTFIP       integer
-Hispanic    integer
-NonHispanic integer

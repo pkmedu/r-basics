@@ -1,8 +1,8 @@
 
 
 
-# Read a txt file, named "class.txt"
-r_data_from_tdf <- read.delim("C:/r-basics/Data/class.txt")
+# Read a space-delimited file, named "class.txt"
+r_data_from_tdf <- read.table("C:/r-basics/Data/class.txt")
 r_data_from_tdf
 
 # Read a csv file, named "class_csv.txt"
