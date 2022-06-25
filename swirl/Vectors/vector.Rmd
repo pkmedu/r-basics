@@ -10,9 +10,9 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 
-### Vectors come in two different flavors: atomic vectors and lists. An atomic vector
-### contains exactly one data type, whereas a list may contain multiple data types.
-### We'll explore atomic vectors further before we get to lists.
+#### Vectors come in two different flavors: atomic vectors and lists. An atomic vector
+#### contains exactly one data type, whereas a list may contain multiple data types.
+#### We'll explore atomic vectors further before we get to lists.
 
 In previous lessons, we dealt entirely with numeric vectors, which are one type
 of atomic vector. Other types of atomic vectors include logical, character,
@@ -38,6 +38,7 @@ operations.
 What do you think tf will look like?
 
 1: a single logical value
+
 2: a vector of 4 logical values
 
 ``` {r}
@@ -84,6 +85,7 @@ guess and you've got a 50% chance of getting the right answer!
 (3 > 5) & (4 == 4)
 
 1: TRUE
+
 2: FALSE
 
 Selection: 2
@@ -94,6 +96,7 @@ Selection: 2
 Break this problem down into 2 pieces. The `|` in the middle states that AT LEAST ONE of the pieces is TRUE. Your job is to figure out if that is an accurate statement. If so, the entire condition is TRUE. If not, it's FALSE.
 
 1: TRUE
+
 2: FALSE
 
 Selection: 1
@@ -101,6 +104,7 @@ Selection: 1
 ((111 >= 111) | !(TRUE)) & ((4 + 1) == 5)
 
 1: TRUE
+
 2: FALSE
 
 Selection: 1

@@ -9,9 +9,8 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-### In this lesson, you'll learn how to examine your local workspace in R and begin
-### to explore the relationship between your workspace and the file system of your
-### machine.
+#### In this lesson, you'll learn how to examine your local workspace in R and begin
+#### to explore the relationship between your workspace and the file system of your machine.
    
 Because different operating systems have different conventions with regards to
 things like file paths, the outputs of these commands may vary across machines.
@@ -57,7 +56,8 @@ list.files()
 ```           
 One of the most helpful parts of any R help file is the See Also section. Read
 that section for list.files. Some of these functions may be used in later
-portions of this lesson.                                                                         
+portions of this lesson.   
+
 Using the args() function on a function name is also a handy way to see what
 arguments a function can take.
 
@@ -108,8 +108,7 @@ This should be the only file in this newly created directory. Let's check this b
 ```{r}
  list.files()
 ```
-Check to see if "mytest.R" exists in the working directory using the
-file.exists() function.
+Check to see if "mytest.R" exists in the working directory using the file.exists() function.
 
 ```{r}  
 file.exists("mytest.R")
