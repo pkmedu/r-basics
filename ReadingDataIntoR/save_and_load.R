@@ -2,7 +2,7 @@
 # Read a csv file, named "class_csv.txt"
 
 class <- read.csv("C:/r-basics/Data/class_csv.txt", sep=',',
-                   stringsAsFactors = TRUE)
+                   stringsAsFactors = FALSE)
 colnames(class) <- c('name','sex','age', 'height', 'weight')
 rownames(class) <- NULL
 save (class, file= "C:/r-basics/Data/class.rdata")
@@ -14,7 +14,7 @@ print(t_class, row.names = FALSE)
 
 
 # Read a txt file, named "class.txt"
-class_x <- read.delim("C:/r-basics/Data/class.txt",
+class_x <- read.table("C:/r-basics/Data/class.txt",
                               header=TRUE, as.is=TRUE)
 
 names(class_x) <- tolower(names(class_x))

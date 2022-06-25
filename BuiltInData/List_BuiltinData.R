@@ -10,3 +10,9 @@ data(package = .packages(all.available = TRUE))
 # specific package, so data(package = "plyr") will give the datasets 
 # in the plyr package 
 
+library(datasets)
+AirPassengers 
+data()
+sunspot.year
+options (width=200)
+Seatbelts
