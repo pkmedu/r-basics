@@ -12,8 +12,8 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-
-### In this lesson, we will explore some basic building blocks of the R programming language.
+## 1. Basic Building Blocks
+#### In this lesson, we will explore some basic building blocks of the R programming language.
 
 If at any point you'd like more information on a particular topic related to R,
 you can type help.start() at the prompt, which will open a menu of resources

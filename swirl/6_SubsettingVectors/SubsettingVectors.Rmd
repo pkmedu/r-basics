@@ -10,11 +10,10 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 ```{r}
   library(swirl)
-
 ```
-    Hi! I see that you have some variables saved in your workspace. To keep things running smoothly, 
-    I recommend you clean up before starting swirl.
-
+   
+## 6. Subsetting Vectors
+    
     Type ls() to see a list of the variables in your workspace. Then, type rm(list=ls()) to clear your workspace.
 
     Type swirl() when you are ready to begin.
@@ -22,75 +21,7 @@ knitr::opts_chunk$set(echo = TRUE)
 ```{r}
      rm(list=ls())
 ```
-
-    Welcome to swirl! Please sign in. If you've been here before, use the same name as you did then. 
-    If you are new, callyourself something unique.
-
-    What shall I call you? pkm
-
-    Would you like to continue with one of these lessons?
-
-    1: R Programming Basic Building Blocks
-
-    2: No. Let me start something new.
-
-    Selection: 1
-
-    In many programming environments, the up arrow will cycle through previous commands. 
-    Try hitting the up arrow on your keyboard until you get to this command (z * 2 + 100), 
-    then change 100 to 1000 and hit Enter.
-    
-    If the up arrow doesn't workfor you, just type the corrected command.
-
-    Not exactly. Give it another go. Or, type info() for more options.
-
-    When you are at the R prompt (>):
-
-    -- Typing skip() allows you to skip the current question.
-
-    -- Typing play() lets you experiment with R on your own; swirl will ignore what you do...
-
-    -- UNTIL you type nxt() which will regain swirl's attention.
-
-    -- Typing bye() causes swirl to exit. Your progress will be saved.
-    
-    -- Typing main() returns you to swirl's main menu.
-    
-    -- Typing info() displays these options again.
-
-     main()
-
-    Returning to the main menu...
-
-    Would you like to continue with one of these lessons?
-
-    1: R Programming Basic Building Blocks
-
-    2: No. Let me start something new.
-
-    Selection: 2
-
-    Please choose a course, or type 0 to exit swirl.
-
-    1: R Programming
-
-    2: Take me to the swirl course repository!
-
-    Selection: 1
-
-    Please choose a lesson, or type 0 to return to course menu.
-
-    1: Basic Building Blocks      2: Workspace and Files        3: Sequences of Numbers       4: Vectors 
-                
-    5: Missing Values             6: Subsetting Vectors         7: Matrices and Data Frames   8: Logic    
-               
-    9: Functions                 10: lapply and sapply         11: vapply and tapply         12: Looking at Data   
-      
-    13: Simulation                14: Dates and Times           15: Base Graphics             
-
-    Selection: 6
-
-    In this lesson, we'll see how to extract elements from a vector based on some conditions that we specify.
+### In this lesson, we'll see how to extract elements from a vector based on some conditions that we specify.
                                                                                                                    
     For example, we may only be interested in the first 20 elements of a vector, or only the elements 
     that are not NA, or only those that are positive or correspond to a specific variable of interest. 

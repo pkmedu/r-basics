@@ -8,8 +8,7 @@ output: html_document
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
-
-
+## 4. Vectors
 #### Vectors come in two different flavors: atomic vectors and lists. An atomic vector
 #### contains exactly one data type, whereas a list may contain multiple data types.
 #### We'll explore atomic vectors further before we get to lists.

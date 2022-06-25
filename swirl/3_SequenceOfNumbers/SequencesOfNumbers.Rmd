@@ -8,7 +8,7 @@ output: html_document
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
-
+## 3. Sequences of Numbers
 ### When in swirl
 
 You can exit swirl and return to the R prompt (>) at any time by pressing the Esc key.
