@@ -13,8 +13,6 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 
-#library(tinytex)
-
 ### In this lesson, we will explore some basic building blocks of the R programming language.
 
 If at any point you'd like more information on a particular topic related to R,
