@@ -13,6 +13,11 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 ## 1. Basic Building Blocks
+### Author: swirl Team
+
+#### Acknowledgements: R Language Concepts and code questions are used here from the swirl package.
+https://www.r-project.org/nosvn/pandoc/swirl.html
+
 #### In this lesson, we will explore some basic building blocks of the R programming language.
 
 If at any point you'd like more information on a particular topic related to R,

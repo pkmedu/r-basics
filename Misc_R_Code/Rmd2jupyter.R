@@ -31,6 +31,17 @@ getwd()
 rmd2jupyter("SubsettingVectors.Rmd")
 list.files()
 
+setwd("C:/r-basics/swirl/7_MatricesAndDataFrames")
+getwd()
+rmd2jupyter("MatricesAndDataFrames.Rmd")
+list.files()
+
+setwd("C:/r-basics/swirl/8_Logic")
+getwd()
+rmd2jupyter("Logic.Rmd")
+list.files()
+
+
 setwd("C:/r-basics/swirl")
 getwd()
 rmd2jupyter("swrlLearningPath.Rmd")

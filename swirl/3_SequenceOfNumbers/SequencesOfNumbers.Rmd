@@ -9,6 +9,12 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 ## 3. Sequences of Numbers
+
+### Author: swirl Team
+
+#### Acknowledgements: R Language Concepts and code questions are used here from the swirl package.
+https://www.r-project.org/nosvn/pandoc/swirl.html
+
 ### When in swirl
 
 You can exit swirl and return to the R prompt (>) at any time by pressing the Esc key.
