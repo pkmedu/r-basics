@@ -46,7 +46,7 @@ getwd()
 rmd2jupyter("Functions.Rmd")
 list.files()
 
-setwd("C:/r-basics/swirl/10_lapply_and_sapply")
+setwd("C:/r-basics/swirl/10_lapply_sapply")
 getwd()
 rmd2jupyter("lapply_and_sapply.Rmd")
 list.files()

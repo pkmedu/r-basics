@@ -5,6 +5,10 @@ date: '2022-06-27'
 output: html_document
 ---
 
+```{r chunk}  
+options(knitr.duplicate.label = "allow")
+```
+
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
@@ -35,9 +39,16 @@ I've stored the dataset in a variable called flags. Type head(flags) to preview 
 the 
 
 
-```{r setup, include=FALSE, echo=FALSE}
+#{r setup, include=FALSE, echo=FALSE}
+
+```{r}
 require("knitr")
 opts_knit$set(root.dir = "C:/r-basics/Data")
+
+```
+
+```{r}
+getwd()
 load('flags.Rdata')
 flags <- flags
 ```
@@ -45,7 +56,8 @@ flags <- flags
 ```{r}
 
 library(tidyverse)
-flags %>% dplyr:::select(name, landmass, zone)
+flags %>% dplyr:::select(name, landmass, zone) %>% 
+          dplyr:::filter(row_number() %in% c(1,2,3,4,5,6,7))
 ```
 
 ```{r} 
@@ -220,7 +232,7 @@ Use the class() function to confirm that shape_mat is a matrix.
 
 
 ```{r}
-class(shape_mat)
+is.matrix(shape_mat)
 ```
 
 As we've seen, sapply() always attempts to simplify the result given by lapply(). It has been successful in doing so for
