@@ -41,6 +41,15 @@ getwd()
 rmd2jupyter("Logic.Rmd")
 list.files()
 
+setwd("C:/r-basics/swirl/9_Functions")
+getwd()
+rmd2jupyter("Funtions.Rmd")
+list.files()
+
+setwd("C:/r-basics/swirl/10_lapply_and_sapply")
+getwd()
+rmd2jupyter("lapply_and_sapply.Rmd")
+list.files()
 
 setwd("C:/r-basics/swirl")
 getwd()
