@@ -43,7 +43,7 @@ list.files()
 
 setwd("C:/r-basics/swirl/9_Functions")
 getwd()
-rmd2jupyter("Funtions.Rmd")
+rmd2jupyter("Functions.Rmd")
 list.files()
 
 setwd("C:/r-basics/swirl/10_lapply_and_sapply")
