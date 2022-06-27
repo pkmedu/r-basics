@@ -41,7 +41,7 @@ the
 
 #{r setup, include=FALSE, echo=FALSE}
 
-```{r}
+```{r, include = TRUE}
 require("knitr")
 opts_knit$set(root.dir = "C:/r-basics/Data")
 
