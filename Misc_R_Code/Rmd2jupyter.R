@@ -56,6 +56,11 @@ getwd()
 rmd2jupyter("swrlLearningPath.Rmd")
 list.files()
 
+setwd("C:/r-basics/R_Language_Concepts")
+getwd()
+rmd2jupyter("class_mode_typeof.Rmd")
+list.files()
+
 
 
 
