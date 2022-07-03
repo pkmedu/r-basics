@@ -47,13 +47,13 @@ Elements of these data types may be combined to form data structures, such as at
 
 * attributes() - does it have any metadata?
 
-```{r}
+```{r, results="markup"}
 df1 <- data.frame(tf= c(TRUE, FALSE), 
                   nume = c(45, 37.49),
                   integ = c(35L, 20L),
                   complx = c(1+2i, 0+1i),
-                  char = c('CANCER', "Diarrhea"))
-# df2$rawvar <- charToRaw(df1$char)
+                  char = c("CANCER", "Diarrhea"))
+df1
 
 ```
 
