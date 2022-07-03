@@ -47,7 +47,7 @@ Elements of these data types may be combined to form data structures, such as at
 
 * attributes() - does it have any metadata?
 
-```{r, results="markup"}
+```{r, output: rmarkdown::github_document}
 df1 <- data.frame(tf= c(TRUE, FALSE), 
                   nume = c(45, 37.49),
                   integ = c(35L, 20L),
