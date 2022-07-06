@@ -3,6 +3,7 @@ title: "swirl Learning Path"
 author: "swirl  Team"
 date: '2022-06-18'
 output:
+  pdf_document: default
   html_document:
     df_print: paged
 ---

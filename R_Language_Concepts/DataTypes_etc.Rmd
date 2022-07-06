@@ -1,8 +1,8 @@
 ---
 output:
+  
   pdf_document: default
   html_document: default
-  
 ---
 
 ```{r setup, include=FALSE}
@@ -10,23 +10,6 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 ## R Data Types and Data Structures
 
-From: https://www.mail-archive.com/r-help@r-project.org/msg17169.html :
-
-'mode' is a mutually exclusive classification of objects according to their basic structure. The 'atomic' modes are numeric, complex, character and logical. Recursive objects have modes such as 'list' or 'function' or a few others. An object has one and only one mode.
-
-'class' is a property assigned to an object that determines how generic functions operate with it. It is not a mutually exclusive classification. If an object has no specific class assigned to it, such as a simple numeric vector, it's class is usually the same as its mode, by convention.
-
-Changing the mode of an object is often called 'coercion'. The mode of an object can change without necessarily changing the class.
-
-You can use the mode or class function to see what type of data is stored in any symbolic
-variable.
-
-Mode and class are not identical—as Bill Venables writes: ― mode‘ is a mutually exclusive classification of
-objects according to their basic structure. . . class‘ is a property assigned to an object that determines how generic
-functions operate with it. (http://tolstoy.newcastle.edu.au/R/e4/help/08/04/8330.html).
-
-
-The main difference between class and typeof is that the first can be defined by the user, but the type cannot.
 
 ### Everything in R is an object.
 
@@ -95,3 +78,20 @@ paste("typeof of various data types")
 sapply (df1, typeof)
 
 ```
+From: https://www.mail-archive.com/r-help@r-project.org/msg17169.html :
+
+'mode' is a mutually exclusive classification of objects according to their basic structure. The 'atomic' modes are numeric, complex, character and logical. Recursive objects have modes such as 'list' or 'function' or a few others. An object has one and only one mode.
+
+'class' is a property assigned to an object that determines how generic functions operate with it. It is not a mutually exclusive classification. If an object has no specific class assigned to it, such as a simple numeric vector, it's class is usually the same as its mode, by convention.
+
+Changing the mode of an object is often called 'coercion'. The mode of an object can change without necessarily changing the class.
+
+You can use the mode or class function to see what type of data is stored in any symbolic
+variable.
+
+Mode and class are not identical—as Bill Venables writes: ― mode‘ is a mutually exclusive classification of
+objects according to their basic structure. . . class‘ is a property assigned to an object that determines how generic
+functions operate with it. (http://tolstoy.newcastle.edu.au/R/e4/help/08/04/8330.html).
+
+
+The main difference between class and typeof is that the first can be defined by the user, but the type cannot.

@@ -1,16 +1,17 @@
 ---
-title: "10. lapply and sapply"
-author: "swirl Team"
-date: '2022-06-27'
-output: html_document
+title: "10. lapply and sapply (xtra)"
+author: "pkm_edu"
+date: '07-06-2022'
+output: pdf_document
 ---
-
-```{r chunk}  
-options(knitr.duplicate.label = "allow")
-```
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+```{r chunk}  
+options(knitr.duplicate.label = "allow")
 ```
 
 ## 10. lapply and sapply
@@ -44,17 +45,16 @@ the
 ```{r, include = TRUE}
 require("knitr")
 opts_knit$set(root.dir = "C:/r-basics/Data")
-
 ```
 
 ```{r}
 getwd()
+setwd("c:/r-basics/Data")
 load('flags.Rdata')
 flags <- flags
 ```
 
 ```{r}
-
 library(tidyverse)
 flags %>% dplyr:::select(name, landmass, zone) %>% 
           dplyr:::filter(row_number() %in% c(1,2,3,4,5,6,7))
@@ -161,20 +161,13 @@ flag_colors <- flags[, 11:17]
 ```{r}
 head(flag_colors)
 ```
-To get a list containing the sum of each column of flag_colors, call the lapply() function with two arguments. The first
-argument is the object over which we are looping (i.e. flag_colors) and the second argument is the name of the function
-we wish to apply to each column (i.e. sum). Remember that the second argument is just the name of the function with no
-parentheses, etc.
+To get a list containing the sum of each column of flag_colors, call the lapply() function with two arguments. The first argument is the object over which we are looping (i.e. flag_colors) and the second argument is the name of the function we wish to apply to each column (i.e. sum). Remember that the second argument is just the name of the function with no parentheses, etc.
 
 ```{r}
 lapply(flag_colors, sum)
 ```
 
-This tells us that of the 194 flags in our dataset, 153 contain the color red, 91 contain green, 99 contain blue, and so
-on.
-
-The result is a list, since lapply() always returns a list. Each element of this list is of length one, so the result can
-be simplified to a vector by calling sapply() instead of lapply(). Try it now.
+This tells us that of the 194 flags in our dataset, 153 contain the color red, 91 contain green, 99 contain blue, and so on. The result is a list, since lapply() always returns a list. Each element of this list is of length one, so the result can be simplified to a vector by calling sapply() instead of lapply(). Try it now.
 
 
 ```{r}
@@ -182,8 +175,7 @@ sapply(flag_colors, sum)
 ```
 
 Perhaps it's more informative to find the proportion of flags (out of 194) containing each color. Since each column is
-just a bunch of 1s and 0s, the arithmetic mean of each column will give us the proportion of 1s. (If it's not clear why,
-think of a simpler situation where you have three 1s and two 0s -- (1 + 1 + 1 + 0 + 0)/5 = 3/5 = 0.6).
+just a bunch of 1s and 0s, the arithmetic mean of each column will give us the proportion of 1s. (If it's not clear why, think of a simpler situation where you have three 1s and two 0s -- (1 + 1 + 1 + 0 + 0)/5 = 3/5 = 0.6).
 
 Use sapply() to apply the mean() function to each column of flag_colors. Remember that the second argument to sapply()
 should just specify the name of the function (i.e. mean) that you want to apply.
@@ -235,12 +227,9 @@ Use the class() function to confirm that shape_mat is a matrix.
 is.matrix(shape_mat)
 ```
 
-As we've seen, sapply() always attempts to simplify the result given by lapply(). It has been successful in doing so for
-each of the examples we've looked at so far. Let's look at an example where sapply() can't figure out how to simplify the
-result and thus returns a list, no different from lapply().
+As we've seen, sapply() always attempts to simplify the result given by lapply(). It has been successful in doing so for each of the examples we've looked at so far. Let's look at an example where sapply() can't figure out how to simplify the result and thus returns a list, no different from lapply().
 
-When given a vector, the unique() function returns a vector with all duplicate elements removed. In other words, unique()
-returns a vector of only the 'unique' elements. To see how it works, try unique(c(3, 4, 5, 5, 5, 6, 6)).
+When given a vector, the unique() function returns a vector with all duplicate elements removed. In other words, unique() returns a vector of only the 'unique' elements. To see how it works, try unique(c(3, 4, 5, 5, 5, 6, 6)).
 
 
 ```{r}
@@ -270,6 +259,7 @@ sapply(unique_vals, length)
 
 The fact that the elements of the unique_vals list are all vectors of *different* length poses a problem for sapply(),
 since there's no obvious way of simplifying the result.
+
 Use sapply() to apply the unique() function to each column of the flags dataset to see that you get the same unsimplified
 list that you got from lapply().
 
@@ -298,4 +288,3 @@ functions' can be very useful when one of R's built-in functions isn't an option
 
 In this lesson, you learned how to use the powerful lapply() and sapply() functions to apply an operation over the
 elements of a list. In the next lesson, we'll take a look at some close relatives of lapply() and sapply().
-
