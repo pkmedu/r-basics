@@ -7,10 +7,9 @@ output:
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+
 ```
 ## R Data Types and Data Structures
-
-From: https://www.mail-archive.com/r-help@r-project.org/msg17169.html :
 
 'mode' is a mutually exclusive classification of objects according to their basic structure. The 'atomic' modes are numeric, complex, character and logical. Recursive objects have modes such as 'list' or 'function' or a few others. An object has one and only one mode.
 
@@ -23,7 +22,7 @@ variable.
 
 Mode and class are not identical—as Bill Venables writes: ― mode‘ is a mutually exclusive classification of
 objects according to their basic structure. . . class‘ is a property assigned to an object that determines how generic
-functions operate with it. (http://tolstoy.newcastle.edu.au/R/e4/help/08/04/8330.html).
+functions operate with it.
 
 
 The main difference between class and typeof is that the first can be defined by the user, but the type cannot.
@@ -32,31 +31,29 @@ The main difference between class and typeof is that the first can be defined by
 
 #### R has 6 basic data types. (In addition to the five listed below, there is also raw which will not be discussed here.)
 
-* character
+character
 
-* numeric (real or decimal)
+numeric (real or decimal)
 
-* integer
+integer
 
-* logical
+logical
 
-* complex
+complex
 
 Elements of these data types may be combined to form data structures, such as atomic vectors. When we call a vector atomic, we mean that the vector only holds data of a single data type. Below are examples of atomic character vectors, numeric vectors, integer vectors, etc.
 
-* character: "a", "swc"
+character: "a", "swc"
 
-* numeric: 2, 15.5
+numeric: 2, 15.5
 
 
-* integer: 2L (the L tells R to store this as an integer)
+integer: 2L (the L tells R to store this as an integer)
 
-* logical: TRUE, FALSE
+logical: TRUE, FALSE
 
-* complex: 1+4i (complex numbers with real and imaginary parts)
+complex: 1+4i (complex numbers with real and imaginary parts)
 
-file:///C:/Users/pmuhuri/Downloads/An_Introduction_to_Data_Analysis_and_Graphics_with.pdf
-(page 11)
 
 The term "data type" in R refers to the type of data that is present in a data structure, and does
 not describe the data structure itself. There are four common types of data in R: numerical,
@@ -65,13 +62,13 @@ below.
 
 #### R provides many functions to examine features of vectors and other objects, for example
 
-* class() - what kind of object is it (high-level)?
+class() - what kind of object is it (high-level)?
 
-* typeof() - what is the object’s data type (low-level)?
+typeof() - what is the object’s data type (low-level)?
 
-* length() - how long is it? What about two dimensional objects?
+length() - how long is it? What about two dimensional objects?
 
-* attributes() - does it have any metadata?
+attributes() - does it have any metadata?
 
 
 ```{r}
