@@ -1,0 +1,60 @@
+
+> # install.packages("remotes")
+> remotes::install_github("rstudio/learnr")
+Downloading GitHub repo rstudio/learnr@HEAD
+These packages have more recent versions available.
+It is recommended to update all of them.
+Which would you like to update?
+
+1: All                          
+2: CRAN packages only           
+3: None                         
+4: rlang (1.0.2 -> 1.0.3) [CRAN]
+
+Enter one or more numbers, or an empty line to skip updates: 1
+rlang (1.0.2 -> 1.0.3 ) [CRAN]
+renv  (NA    -> 0.15.5) [CRAN]
+Installing 2 packages: rlang, renv
+Installing packages into ‘C:/Users/pmuhuri/AppData/Local/R/win-library/4.2’
+(as ‘lib’ is unspecified)
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.2/rlang_1.0.3.zip'
+Content type 'application/zip' length 1577673 bytes (1.5 MB)
+downloaded 1.5 MB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.2/renv_0.15.5.zip'
+Content type 'application/zip' length 1914506 bytes (1.8 MB)
+downloaded 1.8 MB
+
+package ‘rlang’ successfully unpacked and MD5 sums checked
+Warning: cannot remove prior installation of package ‘rlang’
+Warning: restored ‘rlang’
+package ‘renv’ successfully unpacked and MD5 sums checked
+
+The downloaded binary packages are in
+	C:\Users\pmuhuri\AppData\Local\Temp\RtmpGKPdVb\downloaded_packages
+✔  checking for file 'C:\Users\pmuhuri\AppData\Local\Temp\RtmpGKPdVb\remotesc03435a73879\rstudio-learnr-4757865/DESCRIPTION' (557ms)
+─  preparing 'learnr': (2.7s)
+✔  checking DESCRIPTION meta-information ... 
+─  checking for LF line-endings in source and make files and shell scripts (422ms)
+─  checking for empty or unneeded directories
+─  building 'learnr_0.10.4.9000.tar.gz'
+   
+Installing package into ‘C:/Users/pmuhuri/AppData/Local/R/win-library/4.2’
+(as ‘lib’ is unspecified)
+* installing *source* package 'learnr' ...
+** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+*** copying figures
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (learnr)
+Warning message:
+In file.copy(savedcopy, lib, recursive = TRUE) :
+  problem copying C:\Users\pmuhuri\AppData\Local\R\win-library\4.2\00LOCK\rlang\libs\x64\rlang.dll to C:\Users\pmuhuri\AppData\Local\R\win-library\4.2\rlang\libs\x64\rlang.dll: Permission denied
