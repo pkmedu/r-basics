@@ -36,11 +36,8 @@ http://archive.ics.uci.edu/ml/datasets/Flags
 
 Let's jump right in so you can get a feel for how these special functions work!
 
-I've stored the dataset in a variable called flags. Type head(flags) to preview the first six lines (i.e. the 'head') of
-the 
+I've stored the dataset in a variable called flags. Type head(flags) to preview the first six lines (i.e. the 'head') of the data set.
 
-
-#{r setup, include=FALSE, echo=FALSE}
 
 ```{r, include = TRUE}
 require("knitr")
@@ -67,8 +64,7 @@ This tells us that there are 194 rows, or observations, and 30 columns, or varia
 each variable describes some characteristic of that country or its flag. To open a more complete description of the
 dataset in a separate text file, type viewinfo() when you are back at the prompt .
 
-As with any dataset, we'd like to know in what format the variables have been stored. In other words, what is the 'class'
-of each variable? What happens if we do class(flags)? Try it out.
+As with any dataset, we'd like to know in what format the variables have been stored. In other words, what is the 'class' of each variable? What happens if we do class(flags)? Try it out.
 
 ```{r}
 class(flags)
