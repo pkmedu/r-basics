@@ -10,6 +10,8 @@ Acknowledgements: R Language Concepts and code questions (with minor modificatio
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
+Important note: We don't require to use library(swirl) and swirl() here because we are not going to run the R
+script in RStudio Console.
 
 One of the great advantages of using a statistical programming language like R is its vast collection of tools for
 simulating random numbers.

@@ -11,6 +11,9 @@ Acknowledgements: R Language Concepts and code questions (with minor modificatio
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+Important note: We don't require to use library(swirl) and swirl() here because we are not going to run the R
+script in RStudio Console.
+
 Whenever you're working with a new dataset, the first thing you should do is look at it! What is the format of the
 data? What are the dimensions? What are the variable names? How are the variables stored? Are there missing data? Are
 there any flaws in the data?

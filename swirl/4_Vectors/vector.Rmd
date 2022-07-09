@@ -10,6 +10,9 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 Acknowledgements: R Language Concepts and code questions (with minor modifications) are used here from the swirl package. https://www.r-project.org/nosvn/pandoc/swirl.html
 
+Important note: We don't require to use library(swirl) and swirl() here because we are not going to run the R
+script in RStudio Console.
+
 Vectors come in two different flavors: atomic vectors and lists. An atomic vector
 contains exactly one data type, whereas a list may contain multiple data types.
 We'll explore atomic vectors further before we get to lists.

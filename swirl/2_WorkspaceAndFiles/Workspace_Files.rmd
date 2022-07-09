@@ -11,6 +11,9 @@ knitr::opts_chunk$set(echo = TRUE)
 
 Acknowledgements: R Language Concepts and code questions (with minor modifications) are used here from the swirl package. https://www.r-project.org/nosvn/pandoc/swirl.html
 
+Important note: We don't require to use library(swirl) and swirl() here because we are not going to run the R
+script in RStudio Console.
+
 In this lesson, you'll learn how to examine your local workspace in R.Because different operating systems have different conventions with regards to things like file paths, the outputs of these commands may vary across machines.
                                                                             
 However it's important to note that R provides a common API (a common set of
@@ -24,11 +27,6 @@ directory using getwd().
 ```{r}
 getwd()
 ```    
-List all the objects in your local workspace using ls().
-
-```{r}
- ls()
-```      
 Some R commands are the same as their equivalents commands on Linux or on a Mac.
 Both Linux and Mac operating systems are based on an operating system called
 Unix. It's always a good idea to learn more about Unix!
@@ -37,11 +35,6 @@ Unix. It's always a good idea to learn more about Unix!
 x <- 9
 ```                                                                         
 
-Now take a look at objects that are in your workspace using ls().
-
-```{r}
- ls()
-```
    List all the files in your working directory using list.files() or dir().
 ```{r}
 list.files()

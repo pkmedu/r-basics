@@ -8,20 +8,13 @@ output: pdf_document
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
-```{r}
-library(swirl)
-```
-   
+
 Acknowledgements: R Language Concepts and code questions (with minor modifications) are used here from the swirl package.https://www.r-project.org/nosvn/pandoc/swirl.html
 
+Important note: We don't require to use library(swirl) and swirl() here because we are not going to run the R
+script in RStudio Console.
     
-Type ls() to see a list of the variables in your workspace. Then, type rm(list=ls()) to clear your workspace.
-Type swirl() when you are ready to begin.
-    
-```{r}
-     rm(list=ls())
-```
-### In this lesson, we'll see how to extract elements from a vector based on some conditions that we specify.
+In this lesson, we'll see how to extract elements from a vector based on some conditions that we specify.
                                                                                                                    
 For example, we may only be interested in the first 20 elements of a vector, or only the elements 
 that are not NA, or only those that are positive or correspond to a specific variable of interest. 

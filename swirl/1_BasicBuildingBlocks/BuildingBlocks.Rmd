@@ -10,6 +10,9 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 Acknowledgements: R Language Concepts and code questions (with minor modifications) are used here from the swirl package. https://www.r-project.org/nosvn/pandoc/swirl.html
 
+Important note: We don't require to use library(swirl) and swirl() here because we are not going to run the R
+script in RStudio Console.
+
 In this lesson, we will explore some basic building blocks of the R programming language.
 In its simplest form, R can be used as an interactive calculator. Type 5 + 7 and press Enter.
 

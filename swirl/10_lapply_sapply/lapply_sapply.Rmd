@@ -15,6 +15,8 @@ options(knitr.duplicate.label = "allow")
 ```
 Acknowledgements: R Language Concepts and code questions (with minor modifications) are used here from the swirl package. https://www.r-project.org/nosvn/pandoc/swirl.html
 
+Important note: We don't require to use library(swirl) and swirl() here because we are not going to run the R
+script in RStudio Console.
 In this lesson, you'll learn how to use lapply() and sapply(), the two most important members of R's *apply family of
 functions, also known as loop functions.
 

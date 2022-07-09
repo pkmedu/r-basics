@@ -26,6 +26,8 @@ setwd("c:/r-basics/Data")
 load('flags.Rdata')
 flags <- flags
 ```
+Important note: We don't require to use library(swirl) and swirl() here because we are not going to run the R
+script in RStudio Console.
 
 In the last lesson, you learned about the two most fundamental members of R's *apply family of functions: lapply() and
 sapply(). Both take a list as input, apply a function to each element of the list, then combine and return the result.

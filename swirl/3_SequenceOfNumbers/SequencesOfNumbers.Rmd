@@ -10,36 +10,11 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 Acknowledgements: R Language Concepts and code questions (with minor modifications) are used here from the swirl package. https://www.r-project.org/nosvn/pandoc/swirl.html
 
-When in swirl, you can exit swirl and return to the R prompt (>) at any time by pressing the Esc key.
-If you are already at the prompt, type bye() to exit and save your progress. When you
-exit properly, you'll see a short message letting you know you've done so.
+Important note: We don't require to use library(swirl) and swirl() here because we are not going to run the R
+script in RStudio Console.
 
-When you are at the R prompt (>):
-
--- Typing skip() allows you to skip the current question.
-
--- Typing play() lets you experiment with R on your own; swirl will ignore what you do...
-
--- UNTIL you type nxt() which will regain swirl's attention.
-
--- Typing bye() causes swirl to exit. Your progress will be saved.
-
--- Typing main() returns you to swirl's main menu.
-
--- Typing info() displays these options again.
-
-Let's get started!
-Please choose a course, or type 0 to exit swirl.
-
-1: R Programming
-2: Take me to the swirl course repository!
-
-Selection: 1
-
-In this lesson, you'll learn how to create sequences of numbers in R.
-
-The simplest way to create a sequence of numbers in R is by using the `:` 
-operator. Type 1:20 to see how it works.
+In this lesson, you'll learn how to create sequences of numbers in R.The simplest way to create a sequence of
+numbers in R is by using the `:` operator. Type 1:20 to see how it works.
 
 ```{r}
 1:20

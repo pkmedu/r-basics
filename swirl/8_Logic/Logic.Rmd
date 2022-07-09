@@ -9,19 +9,17 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 Acknowledgements:R Language Concepts and code questions (with minor modifications) are used here from the swirl package. https://www.r-project.org/nosvn/pandoc/swirl.html
 
-```{r}
-library(swirl)
-```
+
+Important note: We don't require to use library(swirl) and swirl() here because we are not going to run the R
+script in RStudio Console.
 
 Type ls() to see a list of the variables in your workspace. Then, type rm(list=ls()) to clear your workspace.
 
+```{r}
+ls(); rm(list=ls()) 
+```
 This lesson is meant to be a short introduction to logical operations in R.
 
-```{r}
-rm(list=ls()) 
-```
-
-                                                                                                               
 There are two logical values in R, also called boolean values. They are TRUE and FALSE. In R you can
 construct logical expressions which will evaluate to either TRUE or FALSE.
 

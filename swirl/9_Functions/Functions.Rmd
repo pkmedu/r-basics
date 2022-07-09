@@ -8,7 +8,11 @@ output: pdf_document
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
+
 Acknowledgements: R Language Concepts and code questions (with minor modifications) are used here from the swirl package.https://www.r-project.org/nosvn/pandoc/swirl.html
+
+Important note: We don't require to use library(swirl) and swirl() here because we are not going to run the R
+script in RStudio Console.
 
 By writing functions, you can gain serious insight into how R works. As
 John Chambers, the creator of R, once said:

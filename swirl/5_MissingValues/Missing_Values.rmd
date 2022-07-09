@@ -10,6 +10,9 @@ knitr::opts_chunk$set(echo = TRUE)
 ``` 
 Acknowledgements: R Language Concepts and code questions (with minor modifications) are used here from the swirl package. https://www.r-project.org/nosvn/pandoc/swirl.html
 
+Important note: We don't require to use library(swirl) and swirl() here because we are not going to run the R
+script in RStudio Console.
+
 Missing values play an important role in statistics and data analysis. Often,
 missing values must not be ignored, but rather they should be carefully studied
 to see if there's an underlying pattern or cause for their missingness.

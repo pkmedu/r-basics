@@ -9,10 +9,10 @@ output: pdf_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-```{r}
- library(swirl)
-```     
 Acknowledgements: R Language Concepts and code questions (with some minor modifications) are used here from the swirl package. https://www.r-project.org/nosvn/pandoc/swirl.html
+
+Important note: We don't require to use library(swirl) and swirl() here because we are not going to run the R
+script in RStudio Console.
 
 In this lesson, we'll cover matrices and data frames. Both represent 'rectangular' data types,
 meaning that they are used to store tabular data, with rows and columns.
