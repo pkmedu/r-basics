@@ -1,28 +1,16 @@
 ---
 title: "1. Basic Building Blocks"
-author: "swirl Team"
+author: "Solutions to Swirl's R Programming Exercises"
 date: '06-19-2022'
-output:
-  pdf_document: default
+output: pdf_document
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
+Acknowledgements: R Language Concepts and code questions (with minor modifications) are used here from the swirl package. https://www.r-project.org/nosvn/pandoc/swirl.html
 
-## 1. Basic Building Blocks
-### Author: swirl Team
-
-#### Acknowledgements: R Language Concepts and code questions are used here from the swirl package.
-https://www.r-project.org/nosvn/pandoc/swirl.html
-
-#### In this lesson, we will explore some basic building blocks of the R programming language.
-
-If at any point you'd like more information on a particular topic related to R,
-you can type help.start() at the prompt, which will open a menu of resources
-either within RStudio or your default web browser, depending on your setup).
-Alternatively, a simple web search often yields the answer you're looking for.
-
+In this lesson, we will explore some basic building blocks of the R programming language.
 In its simplest form, R can be used as an interactive calculator. Type 5 + 7 and press Enter.
 
 ```{r}

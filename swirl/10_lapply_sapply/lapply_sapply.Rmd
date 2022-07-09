@@ -1,6 +1,6 @@
 ---
-title: "10. lapply and sapply (xtra)"
-author: "pkm_edu"
+title: "10. lapply and sapply"
+author: "Solutions to Swirl's R Programming Exercises"
 date: '07-06-2022'
 output: pdf_document
 ---
@@ -13,12 +13,7 @@ knitr::opts_chunk$set(echo = TRUE)
 ```{r chunk}  
 options(knitr.duplicate.label = "allow")
 ```
-
-## 10. lapply and sapply
-### Author: swirl Team
-
-#### Acknowledgements: R Language Concepts and code questions are used here from the swirl package.
-https://www.r-project.org/nosvn/pandoc/swirl.html
+Acknowledgements: R Language Concepts and code questions (with minor modifications) are used here from the swirl package. https://www.r-project.org/nosvn/pandoc/swirl.html
 
 In this lesson, you'll learn how to use lapply() and sapply(), the two most important members of R's *apply family of
 functions, also known as loop functions.

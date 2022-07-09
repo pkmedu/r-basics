@@ -1,6 +1,6 @@
 ---
 title: "7. Matrices and Data Frames"
-author: "swirl Team"
+author: "Solutions to Swirl's R Programming Exercises"
 date: '06-25-2022'
 output: pdf_document
 ---
@@ -12,12 +12,7 @@ knitr::opts_chunk$set(echo = TRUE)
 ```{r}
  library(swirl)
 ```     
-## 7. Matrices and Data Frames
-
-#### Author: swirl Team
-
-#### Acknowledgements: R Language Concepts and code questions are used here from the swirl package.
-https://www.r-project.org/nosvn/pandoc/swirl.html
+Acknowledgements: R Language Concepts and code questions (with some minor modifications) are used here from the swirl package. https://www.r-project.org/nosvn/pandoc/swirl.html
 
 In this lesson, we'll cover matrices and data frames. Both represent 'rectangular' data types,
 meaning that they are used to store tabular data, with rows and columns.

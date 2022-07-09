@@ -1,6 +1,6 @@
 ---
 title: "3. Sequences of Numbers"
-author: "swirl Team"
+author: "Solutions to Swirl's Programming Exercises"
 date: '06-19-2022'
 output: pdf_document
 ---
@@ -8,16 +8,9 @@ output: pdf_document
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
-## 3. Sequences of Numbers
+Acknowledgements: R Language Concepts and code questions (with minor modifications) are used here from the swirl package. https://www.r-project.org/nosvn/pandoc/swirl.html
 
-### Author: swirl Team
-
-#### Acknowledgements: R Language Concepts and code questions are used here from the swirl package.
-https://www.r-project.org/nosvn/pandoc/swirl.html
-
-### When in swirl
-
-You can exit swirl and return to the R prompt (>) at any time by pressing the Esc key.
+When in swirl, you can exit swirl and return to the R prompt (>) at any time by pressing the Esc key.
 If you are already at the prompt, type bye() to exit and save your progress. When you
 exit properly, you'll see a short message letting you know you've done so.
 

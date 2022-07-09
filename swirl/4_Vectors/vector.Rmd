@@ -1,6 +1,6 @@
 ---
 title: "4. Vector"
-author: "swirl  Team"
+author: "Solutions to Swirl's R Programming Exercises"
 date: '06-19-2022'
 output: pdf_document
 ---
@@ -8,16 +8,11 @@ output: pdf_document
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
-## 4. Vectors
+Acknowledgements: R Language Concepts and code questions (with minor modifications) are used here from the swirl package. https://www.r-project.org/nosvn/pandoc/swirl.html
 
-### Author: swirl Team
-
-#### Acknowledgements: R Language Concepts and code questions are used here from the swirl package.
-https://www.r-project.org/nosvn/pandoc/swirl.html
-
-#### Vectors come in two different flavors: atomic vectors and lists. An atomic vector
-#### contains exactly one data type, whereas a list may contain multiple data types.
-#### We'll explore atomic vectors further before we get to lists.
+Vectors come in two different flavors: atomic vectors and lists. An atomic vector
+contains exactly one data type, whereas a list may contain multiple data types.
+We'll explore atomic vectors further before we get to lists.
 
 In previous lessons, we dealt entirely with numeric vectors, which are one type
 of atomic vector. Other types of atomic vectors include logical, character,
