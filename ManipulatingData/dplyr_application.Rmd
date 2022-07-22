@@ -1,0 +1,159 @@
+---
+title: "dplyr"
+author: "Pradip Muhuri"
+date: "7/15/2022"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+### Manipulating Data with dplyr Package
+https://www.geek-share.com/detail/2669229281.html#grouping-and-chaining-with-dplyr-package
+
+dplyr is a fast and powerful R package written by Hadley Wickham and Romain Francois. The dplyr philosophy is to have small functions that each do one thing well.
+
+One unique aspect of dplyr is that the same set of tools allow you to work with tabular data from a cariety of sources, including
+
+* data frame
+
+* data tables
+
+* databases
+
+* multidimensional arrays
+
+Task 1: load the data into R.
+
+
+```{r}
+library(ISwR)
+```
+Task 2: data structure.
+```{r}
+str(mtcars)
+```
+Task 3: library dplyr package.
+
+```{r}
+library(dplyr)  
+# check version: you need to have version 0.4.0 or later  
+packageVersion("dplyr")  
+```
+Task 4: Find the class of mtcars.
+
+```{r}
+class(mtcars)
+```
+
+Task 5: Dimension of mtcars
+
+```{r}
+dim(mtcars)
+```
+
+Let us consider the five manipulation tasks with dplyr
+
+- `select()`  
+- `filter()`  
+- `arrange()`  
+- `mutate()`  
+- `summarize()`  
+
+Task 6: select three variables of stroke_tbl. There is no need to use the $ when specifying the variable names in dplyr.
+
+```{r}
+select(mtcars, mpg, wt, vs)
+```
+
+Task 7: select a sequence of columns.
+
+
+```{r}
+select(mtcars, mpg:drat)
+```
+Task 8: throw away selected columns.(the negative sign in front of drat tells us we don’t want those columns.)
+
+
+```{r}
+select(mtcars, -drat)
+
+```
+Task 9: throw away multiple columns.
+
+
+```{r}
+select(mtcars, -(drat:carb))
+```
+Task 10: use filter function to select all rows for which the cyl is equal to 6.
+
+```{r}
+filter(mtcars, cyl == 6)
+```
+Task 11: filter rows based on certain conditions. Those conditions (variables) are separated by commas.
+
+```{r}
+filter(mtcars, cyl ==  6, hp > 120)
+
+```
+https://www.datasciencemadesimple.com/filter-subsetting-rows-r-using-dplyr/
+
+
+Task 12: subset mtcars rows with multiple conditions using %in% operator
+
+```{r}
+filter(mtcars, gear %in% c(3,5))
+```
+```{r}
+filter(mtcars, gear %in% c(4,5) & carb==2)
+```
+Task 13: Filter the rows in R with multiple conditions (NOT). using Dplyr
+
+```{r}
+filter(mtcars, !gear %in% c(4,5))
+```
+Task 14: Filter the rows in R with Contains condition using Dplyr
+
+```{r}
+filter(mtcars, grepl(0,hp))
+```
+Task 15: Subset using Slice Family of function in R dplyr
+ 
+
+```{r}
+mtcars %>% slice_head(n = 5)
+```
+Task 16: Subset using Slice Family of function in R dplyr 
+ 
+
+```{r}
+mtcars %>% slice_tail(n = 5)
+`````
+Task 17: slice_max() function returns the max n rows of the dataframe based on a column as shown below.
+```{r}
+mtcars %>% slice_max(mpg, n = 5)
+```
+Task 18: slice_min() function returns the minimum n rows of the dataframe based on a column as shown below.
+```{r}
+mtcars %>% slice_min(mpg, n = 5)
+```
+Task 19: slice_sample() function returns the sample n rows of the dataframe as shown below.
+
+
+```{r}
+mtcars %>% slice_sample(n = 5)
+```
+Task 20: slice_head() by group in R:  returns the top n rows of the group using slice_head() and group_by() functions
+
+```{r}
+mtcars %>% group_by(vs) %>% slice_head(n = 2)
+
+```
+```{r}
+mtcars %>% group_by(vs)
+```
+```{r}
+sample_n(mtcars,4)
+```

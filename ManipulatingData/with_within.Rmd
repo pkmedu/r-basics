@@ -1,0 +1,58 @@
+---
+title: "with() vs. within()"
+author: "Pradip Muhuri"
+date: "7/16/2022"
+output: pdf_document
+---
+
+Acknowledgements: The text and code are from https://www.journaldev.com/47815/with-and-within-function-in-r
+
+The with() provides the output separately for every value associated with the columns of the data frame.
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+setwd('c:/r-basics/ManipulatingData')
+
+```
+```{r}
+rm(list = ls())
+ 
+Num <- c(100,100,100,100,100)
+Cost <- c(1200,1300,1400,1500,1600)
+ 
+data_A <- data.frame(Num,Cost,stringsAsFactors = FALSE)
+ 
+with(data_A, Num*Cost)
+with(data_A, Cost/Num)
+```
+
+The with() function does not alter the original data frame at any cost. 
+```{r}
+data_A
+```
+
+R within() function calculates the outcome of the expression within itself, but allowing us to create a copy of the data frame with a newcolumn that would eventually stores the result of the R expression.
+
+```{r}
+rm(list = ls())
+ 
+Num <- c(100,100,100,100,100)
+Cost <- c(1200,1300,1400,1500,1600)
+data_A <- data.frame(Num,Cost,stringsAsFactors = FALSE)
+ within(data_A, {Product <- Num*Cost; Q <- Cost/Num; data_A})
+```
+In order to save the addition of two columns create an extra column with $ symbol
+```{r}
+rm(list = ls())
+ 
+Num <- c(100,100,100,100,100)
+Cost <- c(1200,1300,1400,1500,1600)
+data_A <- data.frame(Num,Cost,stringsAsFactors = FALSE)
+data_A$Product <- Num*Cost
+data_A$Q <- Cost/Num
+data_A
+```
+
