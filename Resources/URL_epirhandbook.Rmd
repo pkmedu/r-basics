@@ -1,0 +1,14 @@
+---
+title: "The Epidemiologist  R Handbook"
+author: "Neale Batra et al"
+date: '2022-07-29'
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+[The Epidemiologist  R Handbook - Clickable Link](https://epirhandbook.com/en/)
+
+To download the book, use the R code: download_epirhandbook.R

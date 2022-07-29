@@ -7,6 +7,9 @@ ybin <- as.numeric(y < 10)
 ybin2 <- (y < 10)
 xvars <- cbind(x, z, w)
 mydata <- as.data.frame(cbind(x, z, w, y, ybin, ybin2))
+
+View(mydata)
+
 library(Hmisc)
 contents(mydata)
 mydata
