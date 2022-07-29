@@ -9,17 +9,17 @@ output: pdf_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-[Learn R in Six Steps - Clickable](https://paulvanderlaken.com/2017/10/18/learn-r/)
+[Learn R in Six Steps - referred to as the first Link below - This is a clickable link](https://paulvanderlaken.com/2017/10/18/learn-r/)
 
-* Step 1: An R Folder
+* Step 1: An R Folder (See the first link above)
 
-* Step 2: Cheat sheets for Base R and Cheat Sheets for RStudio Keyboard Shortcuts (See the above link)
+* Step 2: Cheat sheets for Base R and Cheat Sheets for RStudio Keyboard Shortcuts (See the first link above)
 
-* Step 3: [swirl - Worked out solutions by pkm_edu] (https://github.com/pkmedu/r-basics/tree/main/swirl)
+* Step 3: [swirl - Worked out solutions by pkm_edu - This is a second clickable link](https://github.com/pkmedu/r-basics/tree/main/swirl)
 
-* Step 4: A Pirate's Guide to R (See the above link)
+* Step 4: A Pirate's Guide to R (See the first link above)
 
-* Step 5: R for Data Science (See the above link)
+* Step 5: R for Data Science (See the first link above)
 
-* Step 6: Specialize (See the above link)
+* Step 6: Specialize (See the first link above)
 
