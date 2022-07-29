@@ -1,0 +1,26 @@
+---
+title: "package::function()"
+author: "Reddit Source"
+date: '2022-07-29'
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+(Acknowledgements: Someone at Reddit)
+
+There are three instances you can consider using package::function() rather than library(package) and then function():
+
+1. If you want to use a function from a package while another package has a function
+from the same name. Specifying package::function() eliminates any unexpected
+conflicts.
+
+2. If you only need one function from a package, and want to avoid any conflicts (see
+above). You can skip library(package) entirely and just use package::function() or
+rename the function to something else.
+
+3. When developing packages, you need to use the :: operator for all functions that are
+not base r.
+

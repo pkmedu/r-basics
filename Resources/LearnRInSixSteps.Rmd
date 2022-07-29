@@ -9,17 +9,45 @@ output: pdf_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-[Learn R in Six Steps - referred to as the first Link below - This is a clickable link](https://paulvanderlaken.com/2017/10/18/learn-r/)
+[Learn R in Six Steps - referred to as the **first clickable link** here.](https://paulvanderlaken.com/2017/10/18/learn-r/)
 
-* Step 1: An R Folder (See the first link above)
+* Step 1: An R Folder (See the **first clickable link** above.)
 
-* Step 2: Cheat sheets for Base R and Cheat Sheets for RStudio Keyboard Shortcuts (See the first link above)
+* Step 2: Cheat sheets for Base R and Cheat Sheets for RStudio Keyboard Shortcuts (See the **first clickable link** above.) [Here is the **another link for cheat sheets**.](https://paulvanderlaken.com/2017/08/10/r-resources-cheatsheets-tutorials-books/)
 
-* Step 3: [swirl - Worked out solutions by pkm_edu - This is a second clickable link](https://github.com/pkmedu/r-basics/tree/main/swirl)
+* Step 3: [swirl - Worked out solutions by pkm_edu - This is a **second clickable link.**](https://github.com/pkmedu/r-basics/tree/main/swirl) It is a neat way to learn R in an interactive environment. Also consider [**R with Tidyverse packages** or **Base-R** first.](http://varianceexplained.org/r/teach-tidyverse/)
 
-* Step 4: A Pirate's Guide to R (See the first link above)
 
-* Step 5: R for Data Science (See the first link above)
+* Step 4: A Pirate's Guide to R (See the **first clickable link** above.)
 
-* Step 6: Specialize (See the first link above)
+* Step 5: R for Data Science (See the **first clickable link** above.)
+
+* Step 6: Specialize (See the **first clickable link** above.)
+
+[Additional R resources: **learnr tutorial**](https://www.rstudio.com/blog/introducing-learnr/)
+
+To create a learnr tutorial, 
+
+* install the learnr package with:
+
+    install.packages("learnr")
+
+* select the Interactive Tutorial template from the New R Markdown dialog in the RStudio IDE (v1.0.136 or later).
+
+If you want to use jupyter notebooks instead of RStudio, consider the following:
+
+* [Install Anaconda Distribution of Python](https://docs.anaconda.com/anaconda/install/)
+
+* [Add R kernel to Jupyter Lab](https://datatofish.com/r-jupyter-notebook/). 
+
+* Alternatively, you can run the following R script.
+
+        install.packages("devtools")
+
+        install.packages('IRkernel')
+    
+        IRkernel::installspec()
+
+        IRkernel::installspec(user = FALSE)
+
 
