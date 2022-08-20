@@ -1,0 +1,30 @@
+---
+title: "Running SAS Using Rmarkdown in RStudio"
+author: "pkm_edu"
+date: '2022-07-30'
+output: pdf_document
+---
+
+https://www.r-bloggers.com/2019/09/create-rmarkdown-document-with-sas-code-and-output-sas-engine-2/
+
+
+```{r}
+# load the SASmarkdown package
+library(SASmarkdown)
+# set up the options so that knit knows where you SAS executable is
+# set the linesize to be easily readable on letter size paper, portrait
+# and set the knitr options using opts_chunk$set().
+saspath <- "C:/Program Files/SASHome/SASFoundation/9.4/sas.exe"
+sasopts <- "-nosplash -linesize 75"
+knitr::opts_chunk$set(engine="sashtml", engine.path=saspath,
+engine.opts=sasopts, comment=NA)
+# run these commands to convince yourself that
+# within this knitr session the engine changed.
+knitr::opts_chunk$get()$engine
+knitr::opts_chunk$get()$engine.path
+knitr::opts_chunk$get()$engine.opts
+```
+```{r, engine="sas"}
+proc means data=sashelp.class;
+run;
+```
